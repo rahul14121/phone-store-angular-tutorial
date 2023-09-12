@@ -1,8 +1,9 @@
 <h2>Products</h2>
-
+<!--*ngFor is used so that the div tag can be repeated for every element in the list-->
 <div *ngFor="let product of products">
 
   <h3>
+    <!-- [] is a property binding syntax which lets you use the property value in a template expression (in this case - when hovering over the product, it will say the phone name + details). This means you can bind a property to an element of the component's property. -->
     <a [title]="product.name + ' details'"
     [routerLink]="['/products', product.id]">
     {{product.name}}

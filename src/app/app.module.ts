@@ -11,6 +11,9 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { CartComponent } from './cart/cart.component';
 import { ShippingComponent } from './shipping/shipping.component';
 
+//The NgModule rounds up data to make available to other components, as well as imports and routing functionality.
+
+//The RouterModule and the path makes it so when the end of the link is blank, it will take them to the product list, but, for example, when the link is www.xyz.com/cart, it will take the user to the shopping cart, and with www.xyz.com/products/1, it will load the product details for the product with 1 as the ID.
 @NgModule({
   imports: [
     BrowserModule,
