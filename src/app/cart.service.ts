@@ -6,17 +6,20 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class CartService {
-  items: Product[] = [];
+  items: Product[] = []; //Defining a property to store the array of current items in the cart, which follows the Product interface.
   constructor(private http: HttpClient) {}
 
+  //appends a product to an array of items
   addToCart(product: Product) {
     this.items.push(product);
   }
 
+  //collects the items users add to the cart, and returns the item + quantity
   getItems() {
     return this.items;
   }
 
+  //returns an empty array of items
   clearCart() {
     this.items = [];
     return this.items;
